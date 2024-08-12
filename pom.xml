@@ -9,18 +9,18 @@
         <version>1.0.33</version>
     </parent>
 
-    <groupId>org.simplejavamail</groupId>
+    <groupId>com.lalab.simplejavamail</groupId>
     <artifactId>maven-master-project</artifactId>
     <packaging>pom</packaging>
     <version>8.11.2</version>
     <inceptionYear>2009</inceptionYear>
 
-    <name>Simple Java Mail - Maven master project</name>
-    <description>Simple Java Mail - Maven master project</description>
+    <name>Configurable Simple Java Mail - Maven master project</name>
+    <description>A Modificatino of Bottema's Simple Java Mail that accepts configuration per Mailer</description>
     <url>https://www.simplejavamail.org/</url>
 
     <properties>
-        <automaticModuleName>org.simplejavamail.undefined</automaticModuleName> <!-- update in individual modules -->
+        <automaticModuleName>com.lalab.simplejavamail.undefined</automaticModuleName> <!-- update in individual modules -->
         <license.owner.name>Benny Bottema</license.owner.name>
         <license.owner.email>benny@bennybottema.com</license.owner.email>
     </properties>
@@ -29,7 +29,7 @@
 
     <issueManagement>
         <system>GitHub Issues</system>
-        <url>https://github.com/bbottema/simple-java-mail/issues</url>
+        <url>https://github.com/lila-lalab/configurable-simple-java-mail/issues</url>
     </issueManagement>
 
     <scm>
@@ -41,16 +41,7 @@
     <modules>
         <module>modules/core-module</module>
         <module>modules/core-test-module</module>
-        <module>modules/batch-module</module>
-        <module>modules/authenticated-socks-module</module>
-        <module>modules/outlook-module</module>
-        <module>modules/dkim-module</module>
-        <module>modules/smime-module</module>
         <module>modules/simple-java-mail</module>
-        <module>modules/spring-module</module>
-        <module>modules/cli-module</module>
-        <module>modules/jacoco-aggregator-module</module>
-        <module>modules/karaf-module</module>
     </modules>
 
     <dependencies>
