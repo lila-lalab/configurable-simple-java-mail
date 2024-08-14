@@ -2,7 +2,6 @@ package org.simplejavamail.api.email;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import lombok.val;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Arrays;

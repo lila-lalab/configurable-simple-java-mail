@@ -1,3 +1,3 @@
-[submodule "angular-app"]
+[submodule "simplejavamail"]
 	path = simplejavamail.org
 	url = https://github.com/simple-java-mail/simplejavamail.org.git

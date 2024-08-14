@@ -1,6 +1,5 @@
 package org.simplejavamail.email.internal;
 
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import jakarta.activation.DataSource;
 import jakarta.mail.Message.RecipientType;
 import jakarta.mail.internet.InternetAddress;
@@ -84,7 +83,6 @@ import static org.simplejavamail.mailer.internal.EmailGovernanceImpl.NO_GOVERNAN
 /**
  * @see EmailPopulatingBuilder
  */
-@SuppressWarnings({"UnusedReturnValue", "unused"})
 public class EmailPopulatingBuilderImpl implements InternalEmailPopulatingBuilder {
 
 	/**
@@ -1857,7 +1855,6 @@ public class EmailPopulatingBuilderImpl implements InternalEmailPopulatingBuilde
 	 * @see EmailPopulatingBuilder#signWithSmime(File, String, String, String, String)
 	 */
 	@Override
-	@SuppressFBWarnings(value = "OBL_UNSATISFIED_OBLIGATION", justification = "Input stream being created should not be closed here")
 	public EmailPopulatingBuilder signWithSmime(@NotNull final File pkcs12StoreFile, @NotNull final String storePassword, @NotNull final String keyAlias, @NotNull final String keyPassword, @Nullable final String signatureAlgorithm) {
 		return signWithSmime(SmimeSigningConfig.builder()
 				.pkcs12Config(pkcs12StoreFile, storePassword, keyAlias, keyPassword)
@@ -1878,7 +1875,6 @@ public class EmailPopulatingBuilderImpl implements InternalEmailPopulatingBuilde
 	 * @see EmailPopulatingBuilder#encryptWithSmime(File, String, String)
 	 */
 	@Override
-	@SuppressFBWarnings(value = "OBL_UNSATISFIED_OBLIGATION", justification = "Input stream being created should not be closed here")
 	public EmailPopulatingBuilder encryptWithSmime(@NotNull final File pemFile, @Nullable final String keyEncapsulationAlgorithm, @Nullable final String cipherAlgorithm) {
 		return encryptWithSmime(SmimeEncryptionConfig.builder()
 				.x509Certificate(pemFile)

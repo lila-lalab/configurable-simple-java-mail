@@ -1,6 +1,5 @@
 package org.simplejavamail.api.email.config;
 
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -118,7 +117,6 @@ public class SmimeEncryptionConfig implements Serializable {
         /**
          * Delegates to {@link #x509Certificate(InputStream)}.
          */
-        @SuppressFBWarnings(value = "OBL_UNSATISFIED_OBLIGATION", justification = "Input stream being created should not be closed here")
         public SmimeEncryptionConfigBuilder x509Certificate(@NotNull final String pemFile) {
             try {
                 return x509Certificate(new FileInputStream(pemFile));
@@ -130,7 +128,6 @@ public class SmimeEncryptionConfig implements Serializable {
         /**
          * Delegates to {@link #x509Certificate(InputStream)},
          */
-        @SuppressFBWarnings(value = "OBL_UNSATISFIED_OBLIGATION", justification = "Input stream being created should not be closed here")
         public SmimeEncryptionConfigBuilder x509Certificate(@NotNull final File pemFile) {
             try {
                 return x509Certificate(new FileInputStream(pemFile));

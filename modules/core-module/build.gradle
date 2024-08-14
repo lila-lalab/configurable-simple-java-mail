@@ -1,0 +1,15 @@
+def packageName = 'core-module'
+dependencies {
+    //optional modules (original simplejavamail module support)
+    api "com.sanctionco.jmail:jmail:1.4.1"
+    implementation "com.github.therapi:therapi-runtime-javadoc-scribe:0.13.0"
+}
+
+repositories {
+    mavenCentral()
+}
+    
+tasks.named('test') {
+    // Use JUnit Platform for unit tests.
+    useJUnitPlatform()
+}

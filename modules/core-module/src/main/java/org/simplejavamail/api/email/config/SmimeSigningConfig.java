@@ -1,6 +1,5 @@
 package org.simplejavamail.api.email.config;
 
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -100,7 +99,6 @@ public class SmimeSigningConfig {
         /**
          * Delegates to {@link #pkcs12Config(InputStream, String, String, String)}.
          */
-        @SuppressFBWarnings(value = "OBL_UNSATISFIED_OBLIGATION", justification = "Input stream being created should not be closed here")
         public SmimeSigningConfigBuilder pkcs12Config(@NotNull File pkcs12StoreFile, @NotNull String storePassword, @NotNull String keyAlias, @NotNull String keyPassword) {
             try {
                 return pkcs12Config(new FileInputStream(pkcs12StoreFile), storePassword, keyAlias, keyPassword);

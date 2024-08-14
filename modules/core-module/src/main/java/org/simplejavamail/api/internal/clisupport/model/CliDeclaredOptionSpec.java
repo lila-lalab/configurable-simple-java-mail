@@ -1,6 +1,5 @@
 package org.simplejavamail.api.internal.clisupport.model;
 
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import org.jetbrains.annotations.NotNull;
 
 import java.lang.reflect.Method;
@@ -51,7 +50,6 @@ public class CliDeclaredOptionSpec implements Comparable<CliDeclaredOptionSpec> 
 	}
 	
 	@Override
-	@SuppressFBWarnings("EQ_COMPARETO_USE_OBJECT_EQUALS")
 	public int compareTo(@NotNull CliDeclaredOptionSpec other) {
 		int prefixOrder = getNamePrefix().compareTo(other.getNamePrefix());
 		return prefixOrder != 0 ? prefixOrder : getNameAfterPrefix().compareTo(other.getNameAfterPrefix());

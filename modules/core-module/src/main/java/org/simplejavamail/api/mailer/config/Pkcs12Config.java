@@ -1,6 +1,5 @@
 package org.simplejavamail.api.mailer.config;
 
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.EqualsAndHashCode;
 import org.jetbrains.annotations.NotNull;
 import org.simplejavamail.internal.util.MiscUtil;
@@ -81,7 +80,6 @@ public final class Pkcs12Config {
 		/**
 		 * Note that this method creates a new {@code FileInputStream} without closing it.
 		 */
-		@SuppressFBWarnings(value = "OBL_UNSATISFIED_OBLIGATION", justification = "Input stream is meant to travel outside method")
 		public Pkcs12ConfigBuilder pkcs12Store(File pkcs12StorePath) {
 			try {
 				return pkcs12Store(new FileInputStream(pkcs12StorePath));
