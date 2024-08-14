@@ -7,4 +7,5 @@
 *.log
 /modules/simple-java-mail/src/test/resources/secure-testdata/secure-testdata/
 /.gradle
+/.vscode
 build
